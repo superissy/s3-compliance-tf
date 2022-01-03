@@ -6,7 +6,7 @@
 #### Belows are detailed informations such as Archicture, Resources and Step by Step Deployment
 
 > Architectural Workflow
-> ![Architectural Workflow](https://github.com/superissy/s3-compliance-tf/blob/main/Blank%20diagram%20(1).svg)
+> ![Architectural Workflow](https://github.com/superissy/s3-compliance-tf/blob/main/image/Blank%20diagram.png)
 ##### Image 0.1
 > A curated list of S3 bucket Config Rules 
 * s3-bucket-logging-enabled
