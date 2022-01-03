@@ -7,8 +7,7 @@
 
 
 > Architectural Workflow 
-
-
+![image](https://user-images.githubusercontent.com/80710703/147922194-fbfb849f-ab8b-477f-a382-68f1d04f7c3e.png)
 ##### Image 0.1
 > A curated list of S3 bucket Config Rules 
 * s3-bucket-logging-enabled
