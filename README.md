@@ -1,5 +1,5 @@
 # S3 BUCKET NON-COMPLIANCE REMEDIATION
-[Powered by Trans Uinon](https://www.transunion.com/)
+[Powered by Issy](https://)
 
 #### This is an S3 Compliance-violation detection and remediation. This project is build with using Terraform which can allow IaC deployment.
 
