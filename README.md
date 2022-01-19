@@ -24,6 +24,7 @@
 > REMEDIATE THE BUCKETS AND MAKE THEM ENCRYPTED
 * Enter a new function name, select Python 3.8 as the runtime and hit the “Create Function” button.
 * The code below imports json module which is used to convert python dictionary into JSON string. We also import the boto3 module to make calls to AWS APIs.
-```import json
-   import boto3
+```
+import json
+import boto3
 ```
