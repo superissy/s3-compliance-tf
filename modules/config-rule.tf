@@ -1,3 +1,7 @@
+# ----------------------------------------------------------------
+# Enabling AWS Config Rule for all UNENCRYPTED S3 BUCKETS
+# ----------------------------------------------------------------
+
 resource "aws_config_config_rule" "ConfigRule" {
   name = "s3-bucket-server-side-encryption-enabled"
   description = "A Config rule that checks that your Amazon S3 bucket either has Amazon S3 default encryption enabled or that the S3 bucket policy explicitly denies put-object requests without server side encryption."
