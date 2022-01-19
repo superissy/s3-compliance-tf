@@ -64,17 +64,23 @@ data "aws_iam_policy_document" "iam_lambda_access" {
 
 
 # Lambda Execution Role 
-data "aws_iam_policy_document" "lambda-execution-role" {
-  statement {
-    sid       = ""
-    effect    = "Allow"
-    resources = ["*"]
+resource "aws_iam_role" "iam_for_lambda" {
+  name               = "iam_for_lambda"
+  assume_role_policy = "${data.aws_iam_policy_document.policy.json}"
+}
 
-    actions = [
-      "logs:CreateLogGroup",
-      "logs:CreateLogStream",
-      "logs:PutLogEvents",
-      "s3-object-lambda:WriteGetObjectResponse",
-    ]
+
+data "aws_iam_policy_document" "policy" {
+  statement {
+    sid    = ""
+    effect = "Allow"
+
+    principals {
+      identifiers = ["lambda.amazonaws.com"]
+      type        = "Service"
+    }
+
+    actions = ["sts:AssumeRole"]
   }
 }
+
