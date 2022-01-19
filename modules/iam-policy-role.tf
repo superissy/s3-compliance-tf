@@ -66,11 +66,11 @@ data "aws_iam_policy_document" "iam_lambda_access" {
 # Lambda Execution Role 
 resource "aws_iam_role" "iam_for_lambda" {
   name               = "iam_for_lambda"
-  assume_role_policy = "${data.aws_iam_policy_document.policy.json}"
+  assume_role_policy = "${data.aws_iam_policy_document.iamlambda_role.json}"
 }
 
 
-data "aws_iam_policy_document" "policy" {
+data "aws_iam_policy_document" "iamlambda_role" {
   statement {
     sid    = ""
     effect = "Allow"
