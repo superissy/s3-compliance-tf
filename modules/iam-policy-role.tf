@@ -44,12 +44,18 @@ data "aws_iam_policy_document" "iam_lambda_access" {
     sid    = "SNSAcces"
     effect = "Allow"
     actions = [
-      "sns:Get*",
-      "sns:Describe*",
-      "sns:List*",
+      "SNS:Subscribe",
+      "SNS:SetTopicAttributes",
+      "SNS:RemovePermission",
+      "SNS:Receive",
+      "SNS:Publish",
+      "SNS:ListSubscriptionsByTopic",
+      "SNS:GetTopicAttributes",
+      "SNS:DeleteTopic",
+      "SNS:AddPermission"
     ]
     resources = [
-      "*"
+      "aws_sns_topic.s3-lambda-sns.arn"
     ]
 
   }
