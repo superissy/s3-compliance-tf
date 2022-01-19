@@ -36,3 +36,17 @@ config_client = boto3.client('config')
 config_client1 = boto3.client('s3')
 config_client2 = boto3.client('sns')
 ```
+
+The Lambda function handler is the method in our function code that processes events. When our function is invoked, Lambda runs the handler method. The general syntax is shown below
+```
+def lambda_handler(event, context):
+```
+Use the code below to return the non_compliant/unencrypted buckets from AWS config
+
+```
+    response = config_client.get_compliance_details_by_config_rule(
+    ConfigRuleName='s3-bucket-server-side-encryption-enabled',
+    ComplianceTypes=['NON_COMPLIANT'],
+    )
+    non_compliant=json.loads(json.dumps(response, default=str))
+```
