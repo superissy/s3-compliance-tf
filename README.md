@@ -28,3 +28,11 @@
 import json
 import boto3
 ```
+
+* We will be interacting with 3 AWS services which are AWS config, S3 and SNS. We pass the name of the services using the code below
+
+```
+config_client = boto3.client('config')
+config_client1 = boto3.client('s3')
+config_client2 = boto3.client('sns')
+```
