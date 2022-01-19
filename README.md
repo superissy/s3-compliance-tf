@@ -20,3 +20,5 @@
 * IAM Policy & Role
 * Lambda Function
 * SNS Notification
+
+> REMEDIATE THE BUCKETS AND MAKE THEM ENCRYPTED
