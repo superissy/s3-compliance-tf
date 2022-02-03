@@ -55,15 +55,15 @@ def lambda_handler(event, context):
             Subject='S3 bucket Encryption Remediated'
         )
 
-        return 'no errors, compliance remediated'
-    # else:
-    #     # test message saying nothing to remediate send a message to the sns subscribers
+        return 'Evaluation completed and Non-Compliance S3 Buckets Detected'
+     else:
+    #    # test message saying nothing to remediate send a message to the sns subscribers
 
-    #     sns_response = sns_client.publish(
-    #         TargetArn='enter sns arn here',
-    #         Message='S3 bucket encryption is now remediated. The following buckets are now encrypted ' + str(resource_ids),
-    #         Subject='S3 bucket Encryption Remediated'
-    #     )
+         sns_response = sns_client.publish(
+             TargetArn='enter sns arn here',
+             Message='S3 bucket encryption is now remediated. The following buckets are now encrypted ' + str(resource_ids),
+             Subject='S3 bucket Encryption Remediated'
+         )
 
     #     return 'no errors, compliance remediated'
 
