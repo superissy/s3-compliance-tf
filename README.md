@@ -1,5 +1,5 @@
 # S3 BUCKET NON-COMPLIANCE REMEDIATION
-[Powered by Issy](https://)
+[Powered by Issy](https://github.com/superissy)
 
 #### #### This project is to detect and remediate s3 Compliance violations Automatically. This project is built with terraform to allow infrastructure as code (IaC) deployments in different regions or environments and continuous improvement from contributors.
 
